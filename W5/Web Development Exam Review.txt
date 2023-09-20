@@ -1,0 +1,28 @@
+[Web Development Exam Review] 
+
+(Check Canvas for Wednesday Q&A Notes, and the study guide)
+
+
+
+3. IDs versus Classes
+	-> Both identify an element for enacting a style
+	-> IDs are for unique elements
+		- Never use the same ID twice
+	-> Classes can be applied to multiple elements
+		- Used for groups of similar elements
+
+
+4. Exam Format
+
+	-> Short answer
+	-> Simple coding
+	-> Fill in the blank
+
+
+5. Misc
+	-> Margin vs Padding?
+	-> Dont worry about:
+		- Flex box
+		- Icons
+		- CSS Float
+		- CSS Length Units
