@@ -2,5 +2,18 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to #{title}!
   h2 Here we're adding more pug stuff!
+
+  table
+    thead
+      tr
+        th Week
+        th Day of the Week
+        th Topic
+    tbody
+      each item in schedule
+        tr
+          td= item.week
+          td= item.dow
+          td= item.topic

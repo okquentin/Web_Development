@@ -1,9 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  let schedule = [
+    {week: 10, dow: "Monday", topic: "Mini Midterm 2"},
+    {week: 10, dow: "Wednesday", topic: "Model-view-controller"},
+    {week: 10, dow: "Friday", topic: "Templating with Pug"},
+    {week: 11, dow: "Monday", topic: "Introduction to Express and NPM"},
+    {week: 12, dow: "Wednesday", topic: "MVN architecture of Express"},
+    {week: 12, dow: "Wednesday", topic: "Writing Pug in Express"}
+  ];
+  res.render('index', { title: 'My Website', schedule: schedule });
 });
 
 module.exports = router;
