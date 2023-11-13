@@ -16,3 +16,24 @@ mongoose.connection.on('error', function(){
 mongoose.connection.on('open', function(){
 	console.log("Successfully connected to database");
 });
+
+let scheduleSchema = new mongoose.Schema({
+	week: Number,
+	day_of_week: String,
+	topic: String
+});
+
+// Create a model (class) from the schema
+let Schedule = mongoose.model('Schedule', scheduleSchema);
+
+
+// Create a instance of the schedule model
+let s = new Schedule({
+  week: 10,
+  dow: "Monday",
+  topic: "Mini Midterm 2"
+});
+
+// Save the instance to the database
+s.save();
+
