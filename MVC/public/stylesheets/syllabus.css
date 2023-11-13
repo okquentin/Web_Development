@@ -1,8 +1,11 @@
-html * {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    background-color: #333132;
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+  
+a {
     color: white;
-  }
+}
 
 h1 {
     text-align: center;

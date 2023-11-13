@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
     {week: 12, dow: "Wednesday", topic: "MVN architecture of Express"},
     {week: 12, dow: "Wednesday", topic: "Writing Pug in Express"}
   ];
-  res.render('schedule', { title: 'Schedule', schedule: schedule });
+  res.render('schedule', { title: 'Schedule', schedule: schedule, activePage: 'schedule' });
 });
 
 module.exports = router;
