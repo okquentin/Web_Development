@@ -1,0 +1,41 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  a {
+    color: #00B7FF;
+  }
+  
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+  }
+  
+  thead{
+    color: white;
+    background-color: #3e423f;
+    border: black;
+  }
+  
+  tbody {
+    color: black;
+    background-color: white;
+    border: black;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #dedede;
+  }
+  
+  tbody tr:nth-child(1) td:nth-child(3){
+    background-color: red;
+    color: white;
+  }

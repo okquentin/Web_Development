@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    link(rel="stylesheet", href="/stylesheets/menu.css")
+    block stylesheet
+  body
+    .FlexBox
+      div
+        a(href="/home", class=(activePage === 'home' ? 'active' : '')) Home
+      div
+        a(href="/schedule", class=(activePage === 'schedule' ? 'active' : '')) Schedule
+      div
+        a(href="/syllabus", class=(activePage === 'syllabus' ? 'active' : '')) Syllabus
+      div
+        a(href="/study", class=(activePage === 'study' ? 'active' : '')) Study
+
+    block content
