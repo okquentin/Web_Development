@@ -1,0 +1,126 @@
+extends menu 
+
+block stylesheet
+    link(rel="stylesheet", href="/stylesheets/syllabus.css")
+
+block content
+
+    h1 ECCS 2441: Web Development
+    section#general-information
+      h2 General information:
+      table
+        tr
+          td Instructor
+          td Dr. Ian Kropp
+        tr
+          td Email
+          td i-kropp@onu.edu
+        tr
+          td Class times
+          td M-W-F: 9:00 to 9:50
+        tr
+          td Office hours
+          td
+            ul
+              li Monday: 3 to 4PM
+              li Tuesday: 9 to 11AM, 2PM-3PM
+              li Wednesday: 1-2PM
+        tr
+          td Office
+          td Kennedy 242
+        tr
+          td Classroom
+          td Kennedy 307
+        tr
+          td Required Textbooks
+          td None
+        tr
+          td Mini-midterms (non-cumulative)
+          td
+            ul
+              li Midterm 1: September 22nd
+              li Midterm 2: TBA
+              li Midterm 3: TBA
+    section#course-objectives
+      h2 Course Objectives
+      p By the end of this semester, you should be able to:
+      ol
+        li
+          | Work with ambiguous client requirements in order to create a full stack web application with
+          ul
+            li HTML
+            li CSS
+            li JavaScript
+        li
+          | Understand HTTP well enough to
+          ul
+            li Debug broken websites
+            li Optimize poorly performing websites
+            li Use REST API calls to client specifications
+            li Choose the appropriate HTTP method for appropriate scenarios
+            li Describe to a lay person the benefits of HTTPS
+        li Create accessible web applications
+    section#course-format
+      h2 Course Format
+      p This course is going to go beyond the traditional lecture format, and will at times include:
+      ul
+        li Lab-based lectures
+        li Student lead learning
+        li Ambiguous real-world engineering problems
+    section#academic-honesty
+      h2 Academic Honesty
+      p
+        | For individual assignments, I expect you to complete the work entirely by yourself. Passing someone
+        | else's work as your own will not be tolerated. However, I encourage you to discuss course topics with
+        | me or your peers! Often all it takes to understand a topic is to talk it through with someone else. If
+        | you're unclear about this distinction, I'd be happy to talk it over with you.
+    section#generative-ai
+      h2 Generative AI
+      p
+        | Generative AI tools, such as ChatGPT, are extremely beneficial to learning and coding. In fact, I
+        | encourage you to use generative AI for the following use cases:
+      ul
+        li As a virtual tutor to clarify course concepts
+          ul
+            li e.g., how do I import CSS into my web page?
+            li e.g., why is HTTPS an important protocol?
+        li As a code reviewer
+          ul
+            li i.e., pasting your code into a chat service to get feedback on your code
+        li Explaining code snippets that you don’t understand
+          ul
+            li e.g., “why does every web page start with <!DOCTYPE html>?”
+      p
+        | On the other hand, generative AI output is often very incorrect, so I encourage you to cross reference its
+        | output. Also, just as you shouldn’t copy off of a fellow student, don’t copy off of ChatGPT. In short,
+        | avoid:
+      ul
+        li Directly copying and pasting entire programs from generative AI models
+        li Using code from generative AI models that you don’t understand.
+      p
+        | In other words, treat generative AI as a classmate: someone you can discuss course topics with, but
+        | don’t copy and paste their work or copy off of their work during an exam.
+
+    // ***** Late Policy *****
+    section#late-policy
+        h2 Late Policy
+        ul
+            li
+                | If you feel that you cannot finish an assignment well before the due date, then please contact
+                | me, and we can discuss whether or not an extension is feasible. You must contact far ahead of
+                | the due date (i.e., don’t wait until 5 minutes before the assignment due date). Extensions will
+                | ultimately be under my discretion. Examples of excuses are:
+            ul
+                li Family emergencies
+                li Heath emergencies
+                li Extraordinary work loads
+        li
+            | You can have 1 freebie assignment extension that you may use to add one extra week to any
+            | assignment without any excuse. Use this wisely!
+        li All unexcused assignment grades will be reduced by 30% every day past its due date.
+
+    section#other-policies
+        h2 Other Course policies
+        p
+            | See other common course policies 
+            a(style="color: #f26b27;" href="https://my.onu.edu/registrars_office/policies") here

@@ -1,0 +1,26 @@
+extends menu 
+
+block stylesheet 
+    link(rel="stylesheet", href="/stylesheets/home.css")
+
+block content
+  h1 #{title}
+  p 
+    | Welcome to Web Development at #{' '} 
+    span.ONU Ohio Northern University
+  p 
+    | In this course, you will learn how to develop accessible websites and web applications
+    | using languages such as:
+    ul
+        li 
+            | HTML 
+            img(src = "/images/html5.png", alt="HTML Icon", class="icon")
+        li 
+            | CSS 
+            img(src = "/images/css.png", alt="HTML Icon", class="css")
+        li 
+            | Javascript 
+            img(src = "/images/js.png", alt="HTML Icon", class="icon")
+        li 
+            | and Pug 
+            img(src = "/images/pug.png", alt="HTML Icon", class="pug")
