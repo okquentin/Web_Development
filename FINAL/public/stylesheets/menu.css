@@ -11,15 +11,11 @@
   }
   
   .FlexBox > div{
-    font-size: 20px;
-    padding: 20px;
+    font-size: 35px;
+    padding: 35px;
     background-clip: padding-box;
     border-right: 1px solid lightgray;
     width: 25%;
-  }
-  
-  .FlexBox >div:last-child{
-    
   }
   
   .FlexBox > div:hover {

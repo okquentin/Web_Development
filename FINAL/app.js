@@ -1,3 +1,7 @@
+// Mongoose stuff
+let mongoose = require("mongoose");
+let connectionStr = "mongodb+srv://ECCS2441Students:qmqW0yC9Fz3Yxpd@expressdb.rhdtl9l.mongodb.net/?retryWrites=true&w=majority";
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -11,6 +15,14 @@ var syllabusRouter = require('./routes/syllabus');
 var studyRouter = require('./routes/study');
 
 var app = express();
+
+// Wait for Mongoose Connection
+mongoose.set("strictQuery", false);
+main().catch((err) => console.log(err));
+async function main() {
+  await mongoose.connect(connectionStr);
+}
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -47,3 +59,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
