@@ -1,11 +1,23 @@
 body {
     padding: 200px;
     font: 50px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
+    background-image: url('../images/jlk-2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
 }
+
+.content{
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    margin-top: 40px;
+}
+
+.sec
 
 h1 {
     font-size: 90px;

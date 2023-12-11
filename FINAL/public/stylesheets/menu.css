@@ -8,6 +8,7 @@
 
   .FlexBox a{
     text-decoration: none;
+    color: white;
   }
   
   .FlexBox > div{

@@ -4,16 +4,17 @@ block stylesheet
     link(rel="stylesheet", href="/stylesheets/schedule.css")
 
 block content
-  h1 Weekly #{title}
-  table
-    thead
-      tr
-        th Week
-        th Day of the Week
-        th Topic
-    tbody
-      each item in schedule
+  .content
+    h1 Weekly #{title}
+    table
+      thead
         tr
-          td= item.week
-          td= item.dow
-          td= item.topic
+          th Week
+          th Day of the Week
+          th Topic
+      tbody
+        each item in schedule
+          tr
+            td= item.week
+            td(class='day')= item.dow
+            td(class=item.topic.toLowerCase().startsWith('midterm') ? 'midterm' : '')= item.topic 
