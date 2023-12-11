@@ -3,7 +3,8 @@ html
   head
     link(rel="stylesheet", href="/stylesheets/menu.css")
     block stylesheet
-  body
+
+  body(class=activePage)
     .FlexBox
       div
         a(href="/", class=(activePage === 'home' ? 'active' : '')) Home

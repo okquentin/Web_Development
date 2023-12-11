@@ -32,7 +32,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', usersRouter);
 app.use('/', homeRouter);
@@ -40,7 +39,7 @@ app.use('/schedule', scheduleRouter);
 app.use('/syllabus', syllabusRouter);
 app.use('/study', studyRouter);
 
-app.use(express.static('public')); // for favicon
+app.use(express.static(path.join(__dirname, 'public')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

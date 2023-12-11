@@ -1,18 +1,38 @@
 extends menu 
 
 block stylesheet 
-    link(rel="stylesheet", href="/stylesheets/study.css")
+    link(rel="stylesheet", href="/stylesheets/style.css")
 
 block content   
-    .content
+    .contentBlock.firstBlock
+
+        h1 Study Guide for Midterm 1
+
+        - var N = 18; 
+        - for (var i = 1; i <= N; i++)
+            p 
+                img(src="/images/midterm1/img" + i + ".png", alt="Description of Image" + i, class="image")
+
+    .contentBlock
+        h1 Study Guide for Midterm 2
+
+        - var N = 5; 
+        - for (var i = 1; i <= N; i++)
+            p 
+                img(src="/images/midterm2/img" + i + ".png", alt="Description of Image" + i, class="image")
+
+        a(class="slideshow", href="/files/http.pptx" download) Download: Slideshow on HTTP
+
+        - var J = 10; 
+        - for (var i = 7; i <= J; i++)
+            p 
+                img(src="/images/midterm2/img" + i + ".png", alt="Description of Image" + i, class="image")
+
+    .contentBlock
         h1 Study Guide for Midterm 3
         
-        - var N = 10; // replace with your actual N
-
-        - var descriptions = []
-
-        
+        - var N = 8; 
     
         - for (var i = 1; i <= N; i++)
             p 
-                img(src="/images/img" + i + ".png", alt="Description of Image" + i, class="image")
+                img(src="/images/midterm3/img" + i + ".png", alt="Description of Image" + i, class="image")

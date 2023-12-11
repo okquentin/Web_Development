@@ -1,0 +1,157 @@
+/**
+ * Common Styling
+**/
+
+body {
+  padding: 5%;
+  font: 3.5em "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  margin-top: 2%;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+/**
+ * Unique Styling for Home Page
+**/
+
+body.home{
+    background-image: url('/images/background/jlk-1.jpg');
+}
+
+.home .ONU{
+    color: #f26b27;
+    font-weight: bold;
+}
+
+.home .icon{
+    width: 50px;
+    height: 50px;
+}
+
+.home .css{
+    width:45px;
+    height:50px;
+}
+
+.home .pug{
+    width:70px;
+    height:50px;
+}
+
+/**
+ * Unique Styling for Schedule Page
+**/
+
+body.schedule{
+    background-image: url('../images/background/jlk-3.jpg');
+}
+
+.schedule .midterm {
+  background-color: red;
+  color: white;
+}
+
+.schedule .day{
+  text-transform: capitalize;
+}
+
+.schedule table {
+  width: 100%;
+  font-size: 50px;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.schedule th, .schedule td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: left;
+}
+
+.schedule thead {
+  color: white;
+  background-color: rgba(62, 66, 63, 0.7); /* Semi-transparent Dark Grey */
+  border: black;
+}
+
+.schedule tbody {
+  color: black;
+  background-color: rgba(255,255,255, 0.7); /* Semi-transparent White */
+  border: black;
+}
+
+.schedule tbody tr:nth-child(odd) {
+  background-color: rgba(222,222,222, 0.7); /* Semi-transparent White */
+}
+
+.schedule tbody tr:nth-child(1) td:nth-child(3){
+  background-color: red;
+  color: white;
+}
+
+/**
+ * Unique Styling for Syllabus Page
+**/
+
+body.syllabus {
+    background-image: url('../images/background/jlk-2.jpg');
+}
+
+.syllabus h2 {
+    background-color: #f26b27;
+    color: #333132;
+    font-size: 70px;
+}
+
+.syllabus .center-text{
+    text-align: center;
+}
+
+.syllabus td:first-child{
+    padding-right: 30px;
+}
+
+/**
+ * Unique Styling for Study Page
+**/
+
+body.study{
+  background-image: url('../images/background/webDev.jpg');
+}
+
+.study .image {
+  max-width: 100%;
+  height: auto;
+}
+
+.slideshow{
+  color: #f26b27;
+  font-weight: bold;
+}
+
+.study .contentBlock{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  margin-top: 10%;
+}
+
+.contentBlock.firstBlock{
+  margin-top: 4%;
+}
