@@ -2,9 +2,22 @@ extends menu
 
 block stylesheet 
     link(rel="stylesheet", href="/stylesheets/style.css")
+ 
 
 block content   
-    .contentBlock.firstBlock
+
+    div#toc-container
+        button#toc-button 
+            span Jump to Midterm
+            #toc
+                p 
+                    a(href="#blockOne") Midterm 1
+                p
+                    a(href="#blockTwo") Midterm 2
+                p
+                    a(href="#blockThree") Midterm 3
+
+    .contentBlock(id="blockOne")
 
         h1 Study Guide for Midterm 1
 
@@ -13,7 +26,7 @@ block content
             p 
                 img(src="/images/midterm1/img" + i + ".png", alt="Description of Image" + i, class="image")
 
-    .contentBlock
+    .contentBlock(id="blockTwo")
         h1 Study Guide for Midterm 2
 
         - var N = 5; 
@@ -28,7 +41,7 @@ block content
             p 
                 img(src="/images/midterm2/img" + i + ".png", alt="Description of Image" + i, class="image")
 
-    .contentBlock
+    .contentBlock(id="blockThree")
         h1 Study Guide for Midterm 3
         
         - var N = 8; 
@@ -36,3 +49,8 @@ block content
         - for (var i = 1; i <= N; i++)
             p 
                 img(src="/images/midterm3/img" + i + ".png", alt="Description of Image" + i, class="image")
+
+    script.
+        document.getElementById('toc-button').addEventListener('click', function() {
+            document.getElementById('toc-container').classList.toggle('active');
+        });

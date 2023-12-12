@@ -19,6 +19,10 @@
   flex: 1;
 }
 
+.FlexBox > div:last-child{
+  border-right: none;
+}
+
 .FlexBox > div:hover {
   background-color: orange;
   color: orange;

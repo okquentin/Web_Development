@@ -152,6 +152,43 @@ body.study{
   margin-top: 10%;
 }
 
-.contentBlock.firstBlock{
+.study #blockOne{
   margin-top: 4%;
+}
+
+.study #toc-container {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 1000; /* Ensure it sits over all other elements */
+}
+
+.study #toc-button {
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  font-size: 1em;
+  padding: 1em;
+  transition: transform 0.3s ease;
+}
+
+.study #toc-button:hover {
+  background-color: orange;
+  color: white;
+}
+
+.study #toc {
+  display: none;
+}
+
+.study #toc-container.active #toc-button {
+  transform:scale(1.2);
+  border-radius: 50%;
+}
+.study #toc-container.active #toc-button span {
+  display: none;
+}
+
+.study #toc-container.active #toc {
+  display: block;
 }
