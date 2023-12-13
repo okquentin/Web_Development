@@ -53,7 +53,6 @@ block content
     script.
         document.getElementById('toc-button').addEventListener('click', function() {
             document.getElementById('toc-container').classList.toggle('active');
-            //- openButton();
         });
 
         function adjustButtonSize() {
@@ -68,10 +67,23 @@ block content
         window.onload = adjustButtonSize;
         window.onresize = adjustButtonSize;
 
-        //- function openButton(){
-        //-     let toc = document.getElementById('toc');
-        //-     let button = document.getElementById('toc-button');
-        //-     let tocWidth = window.getComputedStyle(toc).getPropertyValue('width');
-        //-     button.style.width = tocWidth;
-        //-     button.style.height = tocWidth;
-        //- }
+        window.addEventListener('scroll', function() {
+            let blocks = document.querySelectorAll('.contentBlock');
+            let links = document.querySelectorAll('#toc a');
+            let activeId = '';
+
+            blocks.forEach(block => {
+                let rect = block.getBoundingClientRect();
+                if (rect.top <= 0 && rect.bottom >= 0) {
+                    activeId = block.id;
+                }
+            });
+
+            links.forEach(link => {
+                if (link.getAttribute('href') === '#' + activeId) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });

@@ -164,17 +164,16 @@ body.study{
 }
 
 .study #toc-button {
-  background-color: white;
-  color: black;
+  background-color: #2f2f2f;
+  color: white;
   border-radius: 50%;
   font-size: 0.4em;
-  padding: 1em;
+  padding: 0.4em;
   transition: transform 0.3s ease;
 }
 
 .study #toc-button:hover {
   background-color: orange;
-  color: white;
 }
 
 .study #toc {
@@ -191,4 +190,14 @@ body.study{
 
 .study #toc-container.active #toc {
   display: block;
+}
+
+.study #toc a {
+  color: white;
+  text-decoration: none;
+}
+
+.study #toc a.active {
+  text-decoration: underline;
+  color: orange;
 }
