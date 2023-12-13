@@ -53,4 +53,25 @@ block content
     script.
         document.getElementById('toc-button').addEventListener('click', function() {
             document.getElementById('toc-container').classList.toggle('active');
+            //- openButton();
         });
+
+        function adjustButtonSize() {
+            let button = document.getElementById('toc-button');
+            let computedStyle = window.getComputedStyle(button);
+            let width = computedStyle.getPropertyValue('width');
+            let height = computedStyle.getPropertyValue('height');
+            let size = Math.max(parseFloat(width), parseFloat(height)) + 'px';
+            button.style.width = size;
+            button.style.height = size;
+        }
+        window.onload = adjustButtonSize;
+        window.onresize = adjustButtonSize;
+
+        //- function openButton(){
+        //-     let toc = document.getElementById('toc');
+        //-     let button = document.getElementById('toc-button');
+        //-     let tocWidth = window.getComputedStyle(toc).getPropertyValue('width');
+        //-     button.style.width = tocWidth;
+        //-     button.style.height = tocWidth;
+        //- }
