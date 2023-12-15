@@ -150,6 +150,7 @@ body.study{
   flex-direction: column;
   padding: 2%;
   margin-top: 10%;
+  overflow: auto;
 }
 
 .study #blockOne{
