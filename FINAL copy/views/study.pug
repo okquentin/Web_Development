@@ -1,0 +1,93 @@
+extends menu 
+
+block stylesheet 
+    link(rel="stylesheet", href="/stylesheets/style.css")
+
+
+block content   
+
+    div#toc-container
+        button#toc-button 
+            span Jump to Midterm
+            #toc
+                p 
+                    a(href="#blockOne") Midterm 1
+                p
+                    a(href="#blockTwo") Midterm 2
+                p
+                    a(href="#blockThree") Midterm 3
+
+    .contentBlock(id="blockOne")
+        h1 Study Guide for Midterm 1
+        
+        != mdOne 
+
+        - var N = 18; 
+        - for (var i = 1; i <= N; i++)
+            p 
+                img(src="/images/midterm1/img" + i + ".png", alt="Description of Image" + i, class="image")
+
+    .contentBlock(id="blockTwo")
+        h1 Study Guide for Midterm 2
+
+        a(class="slideshow", href="/files/http.pptx" download) Download: Slideshow on HTTP
+
+        != mdTwo
+
+        - var N = 10; 
+        - for (var i = 1; i <= N; i++)
+            - if (i==6)
+                - i++
+            p 
+                img(src="/images/midterm2/img" + i + ".png", alt="Description of Image" + i, class="image")
+
+    .contentBlock(id="blockThree")
+        h1 Study Guide for Midterm 3
+
+        a(class="slideshow", href="/files/http.pptx" download) Download: Slideshow on MVC 
+
+        != mdThree
+        
+        - var N = 8; 
+    
+        - for (var i = 1; i <= N; i++)
+            p 
+                img(src="/images/midterm3/img" + i + ".png", alt="Description of Image" + i, class="image")
+
+    script.
+        document.getElementById('toc-button').addEventListener('click', function() {
+            document.getElementById('toc-container').classList.toggle('active');
+        });
+
+        function adjustButtonSize() {
+            let button = document.getElementById('toc-button');
+            let computedStyle = window.getComputedStyle(button);
+            let width = computedStyle.getPropertyValue('width');
+            let height = computedStyle.getPropertyValue('height');
+            let size = Math.max(parseFloat(width), parseFloat(height)) + 'px';
+            button.style.width = size;
+            button.style.height = size;
+        }
+        window.onload = adjustButtonSize;
+        window.onresize = adjustButtonSize;
+
+        window.addEventListener('scroll', function() {
+        let blocks = document.querySelectorAll('.contentBlock');
+        let links = document.querySelectorAll('#toc a');
+        let activeId = '';
+
+        blocks.forEach(block => {
+            let rect = block.getBoundingClientRect();
+            if (rect.top <= 50 && rect.top >= -50) { // Adjust these values as needed
+            activeId = block.id;
+            }
+        });
+
+        links.forEach(link => {
+            if (link.getAttribute('href') === '#' + activeId) {
+            link.classList.add('active');
+            } else {
+            link.classList.remove('active');
+            }
+        });
+        });
